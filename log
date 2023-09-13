@@ -37,3 +37,19 @@ Wed 13 Sep 2023 11:34:14 PM UTC:
  tests:  4|7
 total_score: 5/70
 fa25f48
+Wed 13 Sep 2023 11:52:04 PM UTC: 
+ treemap.c | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:78:42: error: ‘TreeNode’ has no member named ‘key’
+   78 |     int cmp=tree->lower_than(key, current->key);
+      |                                          ^~
+treemap.c:84:26: error: ‘TreeNode’ has no member named ‘key’
+   84 |       result->key=current->key;
+      |                          ^~
+treemap.c:85:28: error: ‘TreeNode’ has no member named ‘value’
+   85 |       result->value=current->value;
+      |                            ^~
+Compilation failed
+e2b8e8c
