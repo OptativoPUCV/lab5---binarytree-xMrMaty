@@ -31,3 +31,9 @@ treemap.c:42:19: error: ‘lt’ undeclared (first use in this function)
 treemap.c:42:19: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 dff64ee
+Wed 13 Sep 2023 11:34:14 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|7
+total_score: 5/70
+fa25f48
