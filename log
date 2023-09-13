@@ -2,3 +2,21 @@ Wed 13 Sep 2023 11:27:35 PM UTC:
  tests:  1|8
 total_score: 0/70
 1c57b1c
+Wed 13 Sep 2023 11:33:07 PM UTC: 
+ treemap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:40:33: error: implicit declaration of function ‘sizeoff’ [-Werror=implicit-function-declaration]
+   40 |   TreeMap* map=(TreeMap*)malloc(sizeoff(TreeMap));
+      |                                 ^~~~~~~
+treemap.c:40:41: error: expected expression before ‘TreeMap’
+   40 |   TreeMap* map=(TreeMap*)malloc(sizeoff(TreeMap));
+      |                                         ^~~~~~~
+treemap.c:42:19: error: ‘lt’ undeclared (first use in this function)
+   42 |   map->lower_than=lt;
+      |                   ^~
+treemap.c:42:19: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+00cd09f
