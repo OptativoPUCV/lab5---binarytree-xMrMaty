@@ -194,7 +194,5 @@ Pair * nextTreeMap(TreeMap * tree){
   tree->current=current;
   if(current!=NULL){
     return current->pair;
-  }else{
-    return NULL;
   }
 }
