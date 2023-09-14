@@ -105,9 +105,9 @@ void removeNode(TreeMap * tree, TreeNode* node){
     if(node==tree->root){
       tree->root=child;
       child->parent=NULL
+      return;
     }
-    return;
-
+    
     child->parent=node->parent;
     if(hijo==node->parent->left){
       node->parent->left=child;
