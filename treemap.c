@@ -174,8 +174,20 @@ Pair * upperBound(TreeMap * tree, void* key){
   return NULL;
 }
 
-Pair * firstTreeMap(TreeMap * tree) {
+Pair * firstTreeMap(TreeMap * tree){
+  TreeNode* current=tree->root;
+  while(curret->left!=NULL){
+    current=current->left;
+  }
+
+  tree->current=current;
+  Pair* result=(Pair*)malloc(sizeof(Pair));
+  if (result==NULL){
     return NULL;
+  }
+  result->key=current->key;
+  result->value=->current->value;
+  return result;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
