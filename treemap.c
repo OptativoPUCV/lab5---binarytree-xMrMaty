@@ -180,21 +180,20 @@ Pair * firstTreeMap(TreeMap * tree){
 
 Pair * nextTreeMap(TreeMap * tree){
   TreeNode* current=tree->current;
-  TreeNode* succesor=NULL;
 
   if(current->right!=NULL){
-    succesor=minimun(current->right);
+    current=minimun(current->right);
   }else{
     TreeNode* parent=current->parent;
     while(parent!=NULL && current==parent->right){
       current=parent;
       parent=parent->parent;
     }
-    succesor=parent;
+    current=current->parent;
   }
-  tree->current=succesor;
-  if(succesor!=NULL){
-    return succesor->pair;
+  tree->current=current;
+  if(current!=NULL){
+    return current->pair;
   }else{
     return NULL;
   }
