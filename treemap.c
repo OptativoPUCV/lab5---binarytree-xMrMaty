@@ -84,57 +84,42 @@ TreeNode * minimum(TreeNode * x){
 
 
 void removeNode(TreeMap * tree, TreeNode* node){
-/*
+
   if(node->left==NULL && node->right==NULL){
-    if(node->parent==NULL){
-      tree->root=NULL;
-    }else if(node->parent->left==node){
-      node->parent->left=NULL;
-    }else{
+    if(node->parent->left==node){
+      node->parent->left==NULL;
+    }else if(node->parent->right==node){
       node->parent->right=NULL;
     }
-    free(node);
+    return;
   }
-    //
-  else if(node->left=NULL;){
-    TreeNode* child=node->right;
-    if(node->parent=NULL){
-      tree->root=child;
-      child->parent=NULL;
+  
+  if(node->left==NULL || node->right==NULL;){
+    TreeNode* child;
+    if(node->left==NULL){
+      child=node->right;
     }else{
-      if(node->parent->left==node){
-        node->parent->left=child;
-      }else{
-        node->parent->right=child;
-      }
+      child=node->left;
+    }
+
+    if(node==tree->root){
+      tree->root=child;
+      child->parent=NULL
+    }
+    return;
+
+    child->parent=node->parent;
+    if(hijo==node->parent->left){
+      node->parent->left=child;
+    }else{
       node->parent->right=child;
     }
-    //libera
-    free(node);
-  }else if(node->right==NULL){
-    TreeNode* child=node->left;
-    if (node->parent==NULL){
-      tree->root=child;
-      child->parent=NULL;
-    }else{
-      if(node->parent->left==node){
-        node->parent->left=child;
-      }else{
-        node->parent->right=child
-      }
-      child->parent=node->parent;
-    }
-    //libera
-    free(node);
+    return;
   }
-  //
-  else{
-    TreeNode* succesor=minimun(node->right);
-    node->key=succesor->key;
-    node->value=succesor->value;
-    removeNode(tree, succesor);
-  }
-*/
+  TreeNode* succesor=minimun(node->right);
+  node->pair->key=succesor->pair->key;
+  node->pair->value=succesor->pair->value;
+  removeNode(tree, succesor);
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
@@ -169,6 +154,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key){
 
 
 Pair * upperBound(TreeMap * tree, void* key){
+  
   return NULL;
 }
 
