@@ -79,7 +79,9 @@ Pair * searchTreeMap(TreeMap * tree, void* key){
   TreeNode* current=tree->root;
   while (current!=NULL){
     if (is_equal(tree, key, current->key)){
-      Pair* result=(Pair*)malloc(sizeof(Pair));
+      tree->current=current;
+      return tree->current->pair; 
+      
       if(result==NULL){
         return NULL;
       }
