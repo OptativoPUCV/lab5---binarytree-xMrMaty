@@ -78,8 +78,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key){
   }
   TreeNode* current=tree->root;
   while (current!=NULL){
-    int cmp=tree->lower_than(key, current->key);
-    if (cmp==0){
+    if (is_equal(tree, key, current->key)){
       Pair* result=(Pair*)malloc(sizeof(Pair));
       if(result==NULL){
         return NULL;
@@ -87,14 +86,13 @@ Pair * searchTreeMap(TreeMap * tree, void* key){
       result->key=current->key;
       result->value=current->value;
       return result;
-    } else if(cmp<0){
+    } else if(tree->lower_than(key, current->key)<0){
       current=current->left;
-      
     } else {
       current=current->right;
     }
   }
-  return current->key;
+  return ;
 }
 
 
