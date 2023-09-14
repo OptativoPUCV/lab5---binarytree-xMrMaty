@@ -476,3 +476,43 @@ Thu 14 Sep 2023 12:54:59 AM UTC:
  tests:  15|4
 total_score: 25/70
 70ddeb4
+Thu 14 Sep 2023 01:14:02 AM UTC: 
+ treemap.c | 46 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 46 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:97:11: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   97 |   else if(node->left=NULL;){
+      |           ^~~~
+treemap.c:97:26: error: expected ‘)’ before ‘;’ token
+   97 |   else if(node->left=NULL;){
+      |          ~               ^
+treemap.c:99:8: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   99 |     if(node->parent=NULL){
+      |        ^~~~
+treemap.c:121:34: error: expected ‘;’ before ‘}’ token
+  121 |         node->parent->right=child
+      |                                  ^
+      |                                  ;
+  122 |       }
+      |       ~                           
+treemap.c:129:24: error: implicit declaration of function ‘minimun’; did you mean ‘minimum’? [-Werror=implicit-function-declaration]
+  129 |     TreeNode* succesor=minimun(node->right);
+      |                        ^~~~~~~
+      |                        minimum
+treemap.c:129:24: error: initialization of ‘TreeNode *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+treemap.c:130:9: error: ‘TreeNode’ has no member named ‘key’
+  130 |     node->key=succesor->key;
+      |         ^~
+treemap.c:130:23: error: ‘TreeNode’ has no member named ‘key’
+  130 |     node->key=succesor->key;
+      |                       ^~
+treemap.c:131:9: error: ‘TreeNode’ has no member named ‘value’
+  131 |     node->value=succesor->value;
+      |         ^~
+treemap.c:131:25: error: ‘TreeNode’ has no member named ‘value’
+  131 |     node->value=succesor->value;
+      |                         ^~
+cc1: all warnings being treated as errors
+Compilation failed
+fa7410a
