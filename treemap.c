@@ -173,9 +173,9 @@ Pair * upperBound(TreeMap * tree, void* key){
 }
 
 Pair * firstTreeMap(TreeMap * tree){
-  TreeNode *min = minimum(tree->root);
-  tree->current = min;
-  return min->pair;
+  TreeNode *current = minimum(tree->root);
+  tree->current = current;
+  return current->pair;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
