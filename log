@@ -426,3 +426,24 @@ treemap.c:80:40: error: ‘TreeNode’ has no member named ‘key’
       |                                        ^~
 Compilation failed
 4f2b752
+Thu 14 Sep 2023 12:42:02 AM UTC: 
+ treemap.c | 8 --------
+ 1 file changed, 8 deletions(-)
+test.c: In function ‘insertTreeMap’:
+test.c:503:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:606:1: error: expected declaration or statement at end of input
+  606 | }
+      | ^
+In file included from test.c:4:
+treemap.c:51:13: error: unused variable ‘parent’ [-Werror=unused-variable]
+   51 |   TreeNode* parent=NULL;
+      |             ^~~~~~
+At top level:
+test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+37b9941
