@@ -666,3 +666,61 @@ treemap.c:192:17: error: expected expression before ‘->’ token
 cc1: all warnings being treated as errors
 Compilation failed
 e236119
+Thu 14 Sep 2023 01:32:23 AM UTC: 
+ treemap.c | 16 +++++-----------
+ 1 file changed, 5 insertions(+), 11 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:98:11: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   98 |   else if(node->left=NULL;){
+      |           ^~~~
+treemap.c:98:26: error: expected ‘)’ before ‘;’ token
+   98 |   else if(node->left=NULL;){
+      |          ~               ^
+treemap.c:100:8: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  100 |     if(node->parent=NULL){
+      |        ^~~~
+treemap.c:122:34: error: expected ‘;’ before ‘}’ token
+  122 |         node->parent->right=child
+      |                                  ^
+      |                                  ;
+  123 |       }
+      |       ~                           
+treemap.c:131:24: error: implicit declaration of function ‘minimun’; did you mean ‘minimum’? [-Werror=implicit-function-declaration]
+  131 |     TreeNode* succesor=minimun(node->right);
+      |                        ^~~~~~~
+      |                        minimum
+treemap.c:131:24: error: initialization of ‘TreeNode *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+treemap.c:132:9: error: ‘TreeNode’ has no member named ‘key’
+  132 |     node->key=succesor->key;
+      |         ^~
+treemap.c:132:23: error: ‘TreeNode’ has no member named ‘key’
+  132 |     node->key=succesor->key;
+      |                       ^~
+treemap.c:133:9: error: ‘TreeNode’ has no member named ‘value’
+  133 |     node->value=succesor->value;
+      |         ^~
+treemap.c:133:25: error: ‘TreeNode’ has no member named ‘value’
+  133 |     node->value=succesor->value;
+      |                         ^~
+treemap.c: In function ‘firstTreeMap’:
+treemap.c:172:11: error: assignment to ‘TreeMap *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  172 |   if (tree=NULL || tree->root==NULL){
+      |           ^
+treemap.c:172:7: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  172 |   if (tree=NULL || tree->root==NULL){
+      |       ^~~~
+treemap.c:176:9: error: ‘curret’ undeclared (first use in this function); did you mean ‘current’?
+  176 |   while(curret->left!=NULL){
+      |         ^~~~~~
+      |         current
+treemap.c:176:9: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:185:22: error: ‘TreeNode’ has no member named ‘key’
+  185 |   result->key=current->key;
+      |                      ^~
+treemap.c:186:17: error: expected expression before ‘->’ token
+  186 |   result->value=->current->value;
+      |                 ^~
+cc1: all warnings being treated as errors
+Compilation failed
+9991c53
