@@ -189,7 +189,7 @@ Pair * nextTreeMap(TreeMap * tree){
     current=minimun(current->right);
   }else{
     TreeNode* parent=current->parent;
-    while(parent!=NULL && current==parent->right){
+    while(current->parent!=NULL && current==current->parent->right){
       current=parent;
       parent=parent->parent;
     }
