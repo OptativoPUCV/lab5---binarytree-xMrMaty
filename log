@@ -1443,3 +1443,9 @@ treemap.c:99:27: error: ‘child’ may be used uninitialized in this function [
 cc1: all warnings being treated as errors
 Compilation failed
 44f74f3
+Fri 15 Sep 2023 01:48:03 AM UTC: 
+ treemap.c | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+ tests:  25|1
+total_score: 60/70
+a631a40
