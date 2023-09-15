@@ -100,19 +100,12 @@ void removeNode(TreeMap * tree, TreeNode* node){
       child=node->right;
     }
 
-    if(node==tree->root){
-      tree->root=child;
-      child->parent=NULL
-      return;
-    }
-    
-    child->parent=node->parent;
-    if(hijo==node->parent->left){
+    if(node->parent->left==node){
       node->parent->left=child;
     }else{
       node->parent->right=child;
     }
-    return;
+    child->parent=node->parent;
   }else{
     TreeNode* succesor=minimum(node->right);
     node->pair->key=succesor->pair->key;
