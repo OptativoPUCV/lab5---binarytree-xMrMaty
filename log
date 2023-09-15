@@ -1226,3 +1226,20 @@ Fri 15 Sep 2023 01:23:35 AM UTC:
  tests:  23|2
 total_score: 50/70
 aeb83cd
+Fri 15 Sep 2023 01:23:55 AM UTC: 
+ treemap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:97:43: error: expected ‘)’ before ‘;’ token
+   97 |   if(node->left==NULL || node->right==NULL;){
+      |     ~                                     ^
+treemap.c:108:7: error: expected ‘;’ before ‘return’
+  108 |       return;
+      |       ^~~~~~
+treemap.c:112:8: error: ‘hijo’ undeclared (first use in this function)
+  112 |     if(hijo==node->parent->left){
+      |        ^~~~
+treemap.c:112:8: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+c954764
