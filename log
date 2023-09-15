@@ -1432,3 +1432,14 @@ treemap.c:95:49: error: expected ‘)’ before ‘;’ token
       |           ~                                     ^
 Compilation failed
 847d4b8
+Fri 15 Sep 2023 01:47:23 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:99:27: error: ‘child’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   99 |         node->parent->left=child;
+      |         ~~~~~~~~~~~~~~~~~~^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+44f74f3
