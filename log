@@ -1412,3 +1412,13 @@ treemap.c:95:49: error: expected ‘)’ before ‘;’ token
       |           ~                                     ^
 Compilation failed
 ae9967f
+Fri 15 Sep 2023 01:36:26 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:95:49: error: expected ‘)’ before ‘;’ token
+   95 |   }else if(node->left==NULL || node->right==NULL;){
+      |           ~                                     ^
+Compilation failed
+f1091c1
